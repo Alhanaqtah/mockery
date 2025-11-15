@@ -15,3 +15,9 @@ type Skip3 interface {
 type Skip4 interface {
 	constraints.Float | constraints.Integer
 }
+
+type Skip5 Skip1
+
+type Skip6 interface {
+	Skip5
+}
