@@ -1,4 +1,4 @@
-## Description
+:octicons-tag-24: v3.6.0
 
 An alternative way to configure mocks is to use the `#!go //mockery:generate` directive. Mockery parses the doc comments and allows you to override configuration of specific interfaces in the source code. For example:
 
