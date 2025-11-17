@@ -396,7 +396,8 @@ func (r *RootApp) Run() error {
 			log.Error().
 				Str(logging.LogKeyInterface, ifaceName).
 				Str(logging.LogKeyPackagePath, packagePath).
-				Msg("interface not found in source")
+				Str(logging.LogKeyDocsURL, logging.DocsURL("/faq/#error-interface-not-found-in-source")).
+				Msg("interface not found in source. View the linked documentation for possible reasons why this might occur.")
 		}
 	}
 	if foundMissing {
