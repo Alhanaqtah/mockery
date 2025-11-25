@@ -21,7 +21,7 @@ Mocks generated using this template allow you to define precise functions to be 
 
 You may also provide mockery a path to your own file using the `file://` protocol specifier. The string after `file://` will be the relative or absolute path of your template.
 
-The templates are rendered with the data as shown in the [section below](#template-files).
+The templates are rendered with the data as shown in the [section below](#template-data).
 
 You can see examples of how the mockery project utilizes the template system to generate the different mock styles:
 
