@@ -17,6 +17,7 @@ import (
 const (
 	LogKeyBaseDir       = "base-dir"
 	LogKeyDir           = "dir"
+	LogKeyDocsURL       = "docs-url"
 	LogKeyFile          = "file"
 	LogKeyInterface     = "interface"
 	LogKeyImport        = "import"

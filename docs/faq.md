@@ -5,6 +5,29 @@ title: FAQ
 Frequently Asked Questions
 ===========================
 
+error: `interface not found in source`
+--------------------------------------
+
+!!! tip "v3.6.0"
+
+    Version [`v3.6.0`](https://github.com/vektra/mockery/releases/tag/v3.6.0) of mockery fixed a bug in how files were detected to be auto-generated. Many users may find that mockery is suddenly unable to find mocks after upgrading to `v3.6.0`. Try providing:
+
+    ```yaml title=""
+    include-auto-generated: true
+    ```
+
+    in your mockery config to see if this resolves the issue.
+
+This log message indicates that an interface was explicitly listed in the mockery config but it was not found in the source. This can happen for a number of reasons:
+
+1. The package name was misspelled
+2. The interface name was misspelled
+3. The `#!yaml include-auto-generated: false` parameter was set (of which `false` is the default) and the interface lived in an auto-generated file.
+
+Setting `#!yaml log-level: debug` can provide a lot of insight into mockery's decision tree, so we recommend inspecting these logs for further clues into why the interface was not found.
+
+For more details on `include-auto-generated`, visit [the related documentation](include-auto-generated.md).
+
 error: `no go files found in root search path`
 ---------------------------------------------
 
